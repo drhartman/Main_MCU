@@ -1,0 +1,166 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Owner\Documents\ECE 453\Main_MCU\Dist\ece353_base_project-krachey-surface.uvproj
+Project File Date:  03/25/2015
+
+<h2>Output:</h2>
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(68): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2308 RO-data=32 RW-data=304 ZI-data=256  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2308 RO-data=32 RW-data=328 ZI-data=256  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+events.c(90): error:  #20: identifier "GpioPortB" is undefined
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2308 RO-data=32 RW-data=328 ZI-data=256  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+events.c(7): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(7): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(7): error:  #29: expected an expression
+events.c(7): error:  #65: expected a ";"
+events.c(8): error:  #757: "GPIO_PORT" is not a type name
+events.c(8): error:  #29: expected an expression
+events.c(8): error:  #65: expected a ";"
+events.c(9): error:  #757: "GPIO_PORT" is not a type name
+events.c(9): error:  #29: expected an expression
+events.c(9): error:  #65: expected a ";"
+events.c(10): error:  #757: "GPIO_PORT" is not a type name
+events.c(10): error:  #29: expected an expression
+events.c(10): error:  #65: expected a ";"
+events.c(11): error:  #757: "GPIO_PORT" is not a type name
+events.c(11): error:  #29: expected an expression
+events.c(11): error:  #65: expected a ";"
+events.c(12): error:  #757: "GPIO_PORT" is not a type name
+events.c(12): error:  #29: expected an expression
+events.c(12): error:  #65: expected a ";"
+events.c(13): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(13): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(13): error:  #29: expected an expression
+events.c(13): error:  #65: expected a ";"
+events.c(14): error:  #757: "UART_PERIPH" is not a type name
+events.c(14): error:  #29: expected an expression
+events.c(14): error:  #65: expected a ";"
+events.c(15): error:  #757: "UART_PERIPH" is not a type name
+events.c(15): error:  #29: expected an expression
+events.c(15): error:  #65: expected a ";"
+events.c(16): error:  #757: "UART_PERIPH" is not a type name
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+events.c(10): error:  #20: identifier "PORTA" is undefined
+events.c(10): error:  #44: expression must have pointer type
+events.c(11): error:  #20: identifier "PORTB" is undefined
+events.c(11): error:  #44: expression must have pointer type
+events.c(12): error:  #20: identifier "PORTC" is undefined
+events.c(12): error:  #44: expression must have pointer type
+events.c(13): error:  #20: identifier "PORTD" is undefined
+events.c(13): error:  #44: expression must have pointer type
+events.c(14): error:  #20: identifier "PORTE" is undefined
+events.c(14): error:  #44: expression must have pointer type
+events.c(15): error:  #20: identifier "PORTF" is undefined
+events.c(15): error:  #44: expression must have pointer type
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+events.c(7): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(8): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(9): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(10): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(11): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(12): error:  #20: identifier "GPIO_PORT" is undefined
+events.c(13): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(14): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(15): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(16): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(17): error:  #20: identifier "UART_PERIPH" is undefined
+events.c(18): error:  #20: identifier "UART_PERIPH" is undefined
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(13): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2308 RO-data=32 RW-data=328 ZI-data=256  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(75): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(13): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2308 RO-data=32 RW-data=328 ZI-data=256  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(82): warning:  #550-D: variable "delay" was set but never used
+main.c(184): error:  #20: identifier "COLOFFSET" is undefined
+main.c(184): error:  #20: identifier "BLUE" is undefined
+compiling events.c...
+compiling uart.c...
+uart.c(13): warning:  #550-D: variable "delay" was set but never used
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(82): warning:  #550-D: variable "delay" was set but never used
+compiling events.c...
+compiling uart.c...
+uart.c(13): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=2324 RO-data=32 RW-data=328 ZI-data=1504  
+"ece353_base_project.axf" - 0 Error(s), 2 Warning(s).

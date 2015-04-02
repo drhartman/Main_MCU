@@ -1,0 +1,287 @@
+ARM Linker, 4.1 [Build 791] [Evaluation]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to events.o(.text) for PORTBIntHandler
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(.text) refers to pll.o(.text) for PLL_Init
+    main.o(.text) refers to timer0.o(.text) for timer0Init
+    main.o(.text) refers to uart.o(.text) for InitializeUART
+    main.o(.text) refers to main.o(.data) for GpioPortA
+    main.o(.text) refers to main.o(.bss) for colorMatrix
+    events.o(.text) refers to events.o(.data) for resetISRCounts
+    events.o(.text) refers to main.o(.data) for UpdateDisplay
+    events.o(.text) refers to matrix_led.o(.data) for ucActiveRow
+    matrix_led.o(.text) refers to main.o(.data) for GpioPortB
+    matrix_led.o(.text) refers to matrix_led.o(.data) for DutyCycleOn
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8.o(.ARM.Collect$$$$00000009) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry8.o(.ARM.Collect$$$$00000009) refers to main.o(.text) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing startup.o(.text), (28 bytes).
+    Removing matrix_led.o(.text), (496 bytes).
+
+3 unused section(s) (total 524 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      648  startup.o(RESET)
+    ../../../cmprslib/zerorunl2.c            0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry8.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry5.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry2.o ABSOLUTE
+    PLL.c                                    0x00000000   Number         0  pll.o ABSOLUTE
+    Startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    events.c                                 0x00000000   Number         0  events.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    matrix_led.c                             0x00000000   Number         0  matrix_led.o ABSOLUTE
+    timer0.c                                 0x00000000   Number         0  timer0.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    NmiSR                                    0x00000281   Thumb Code     0  startup.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000288   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000288   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000028c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000290   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$00000009                 0x00000290   Section        8  entry8.o(.ARM.Collect$$$$00000009)
+    .ARM.Collect$$$$00002712                 0x00000298   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000298   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x0000029c   Section        0  main.o(.text)
+    .text                                    0x00000528   Section        0  events.o(.text)
+    .text                                    0x00000674   Section        0  uart.o(.text)
+    .text                                    0x00000758   Section        0  pll.o(.text)
+    .text                                    0x000007e4   Section        0  timer0.o(.text)
+    .text                                    0x00000874   Section       36  init.o(.text)
+    .text                                    0x00000898   Section        0  __dczerorl2.o(.text)
+    i.__scatterload_copy                     0x000008f4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000902   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000904   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .data                                    0x20000000   Section      179  main.o(.data)
+    .data                                    0x200000b4   Section       14  events.o(.data)
+    secCount                                 0x200000b8   Data           4  events.o(.data)
+    refreshCount                             0x200000bc   Data           1  events.o(.data)
+    ADCCount                                 0x200000be   Data           2  events.o(.data)
+    ButtonCount                              0x200000c0   Data           2  events.o(.data)
+    .data                                    0x200000c2   Section      131  matrix_led.o(.data)
+    ucDispChar                               0x200000c2   Data         128  matrix_led.o(.data)
+    .bss                                     0x20000148   Section     1248  main.o(.bss)
+    STACK                                    0x20000628   Section      256  startup.o(STACK)
+    StackMem                                 0x20000628   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    _clock_init                               - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000289   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000289   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_init                               0x00000291   Thumb Code     0  entry8.o(.ARM.Collect$$$$00000009)
+    initPorts                                0x0000029d   Thumb Code   502  main.o(.text)
+    main                                     0x00000493   Thumb Code    88  main.o(.text)
+    PORTBIntHandler                          0x00000529   Thumb Code     2  events.o(.text)
+    PORTFIntHandler                          0x0000052b   Thumb Code     2  events.o(.text)
+    UART2IntHandler                          0x0000052d   Thumb Code     2  events.o(.text)
+    UART3IntHandler                          0x0000052f   Thumb Code     2  events.o(.text)
+    UART4IntHandler                          0x00000531   Thumb Code     2  events.o(.text)
+    UART5IntHandler                          0x00000533   Thumb Code     2  events.o(.text)
+    UART6IntHandler                          0x00000535   Thumb Code     2  events.o(.text)
+    UART7IntHandler                          0x00000537   Thumb Code     2  events.o(.text)
+    TIMER0IntHandler                         0x00000539   Thumb Code   258  events.o(.text)
+    InitializeUART                           0x00000675   Thumb Code   214  uart.o(.text)
+    PLL_Init                                 0x00000759   Thumb Code   134  pll.o(.text)
+    timer0Init                               0x000007e5   Thumb Code   128  timer0.o(.text)
+    __scatterload                            0x00000875   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000875   Thumb Code     0  init.o(.text)
+    __decompress                             0x00000899   Thumb Code     0  __dczerorl2.o(.text)
+    __decompress1                            0x00000899   Thumb Code    92  __dczerorl2.o(.text)
+    __scatterload_copy                       0x000008f5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000903   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000905   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x00000914   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000934   Number         0  anon$$obj.o(Region$$Table)
+    portA_config                             0x20000000   Data          20  main.o(.data)
+    portB_config                             0x20000014   Data          20  main.o(.data)
+    portC_config                             0x20000028   Data          20  main.o(.data)
+    portD_config                             0x2000003c   Data          20  main.o(.data)
+    portE_config                             0x20000050   Data          20  main.o(.data)
+    portF_config                             0x20000064   Data          20  main.o(.data)
+    GpioPortA                                0x20000078   Data           4  main.o(.data)
+    GpioPortB                                0x2000007c   Data           4  main.o(.data)
+    GpioPortC                                0x20000080   Data           4  main.o(.data)
+    GpioPortD                                0x20000084   Data           4  main.o(.data)
+    GpioPortE                                0x20000088   Data           4  main.o(.data)
+    GpioPortF                                0x2000008c   Data           4  main.o(.data)
+    UartBoard0                               0x20000090   Data           4  main.o(.data)
+    UartBoard1                               0x20000094   Data           4  main.o(.data)
+    UartBoard2                               0x20000098   Data           4  main.o(.data)
+    UartBoard3                               0x2000009c   Data           4  main.o(.data)
+    UartBoard4                               0x200000a0   Data           4  main.o(.data)
+    UartBoard5                               0x200000a4   Data           4  main.o(.data)
+    UpdateDisplay                            0x200000a8   Data           1  main.o(.data)
+    CheckADC                                 0x200000a9   Data           1  main.o(.data)
+    DutyCycle                                0x200000aa   Data           2  main.o(.data)
+    CheckButton                              0x200000ac   Data           1  main.o(.data)
+    ucTensCount                              0x200000ae   Data           2  main.o(.data)
+    ucOnesCount                              0x200000b0   Data           2  main.o(.data)
+    OneSecond                                0x200000b2   Data           1  main.o(.data)
+    resetISRCounts                           0x200000b4   Data           1  events.o(.data)
+    ucActiveRow                              0x20000142   Data           1  matrix_led.o(.data)
+    ucActiveColor                            0x20000143   Data           1  matrix_led.o(.data)
+    DutyCycleOn                              0x20000144   Data           1  matrix_led.o(.data)
+    colorMatrix                              0x20000148   Data        1152  main.o(.bss)
+    sensorMatrix                             0x200005c8   Data          96  main.o(.bss)
+    __initial_sp                             0x20000728   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000289
+
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00000a7c, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x000009e0])
+
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x00000934, Max: 0x00040000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000288   Code   RO            3    RESET               startup.o
+    0x00000288   0x00000000   Code   RO          165  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000004   Code   RO          168    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x00000004   Code   RO          171    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000000   Code   RO          173    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000008   Code   RO          174    .ARM.Collect$$$$00000009  mc_w.l(entry8.o)
+    0x00000298   0x00000004   Code   RO          169    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000029c   0x0000028c   Code   RO           11    .text               main.o
+    0x00000528   0x0000014c   Code   RO           63    .text               events.o
+    0x00000674   0x000000e4   Code   RO           85    .text               uart.o
+    0x00000758   0x0000008c   Code   RO           97    .text               pll.lib(pll.o)
+    0x000007e4   0x00000090   Code   RO          150    .text               timer0.lib(timer0.o)
+    0x00000874   0x00000024   Code   RO          175    .text               mc_w.l(init.o)
+    0x00000898   0x0000005c   Code   RO          185    .text               mc_w.l(__dczerorl2.o)
+    0x000008f4   0x0000000e   Code   RO          179    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000902   0x00000002   Code   RO          180    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000904   0x0000000e   Code   RO          181    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000912   0x00000002   PAD
+    0x00000914   0x00000020   Data   RO          177    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000728, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x000000ac])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000000b3   Data   RW           13    .data               main.o
+    0x200000b3   0x00000001   PAD
+    0x200000b4   0x0000000e   Data   RW           64    .data               events.o
+    0x200000c2   0x00000083   Data   RW          113    .data               matrix_led.lib(matrix_led.o)
+    0x20000145   0x00000003   PAD
+    0x20000148   0x000004e0   Zero   RW           12    .bss                main.o
+    0x20000628   0x00000100   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       332         58          0         14          0       2936   events.o
+       652         62          0        179       1248       9444   main.o
+       648        622          0          0        256        224   startup.o
+       228         22          0          0          0        829   uart.o
+
+    ----------------------------------------------------------------------
+      1860        764         32        194       1504      13433   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          1          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0        131          0       5632   matrix_led.o
+        92          0          0          0          0          0   __dczerorl2.o
+         0          0          0          0          0          0   entry.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         8          4          0          0          0          0   entry8.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+       140          6          0          0          0        451   pll.o
+       144         16          0          0          0        657   timer0.o
+
+    ----------------------------------------------------------------------
+       464         38          0        134          0       6808   Library Totals
+         2          0          0          3          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+         0          0          0        131          0       5632   matrix_led.lib
+       178         16          0          0          0         68   mc_w.l
+       140          6          0          0          0        451   pll.lib
+       144         16          0          0          0        657   timer0.lib
+
+    ----------------------------------------------------------------------
+       464         38          0        134          0       6808   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2324        802         32        328       1504      20137   Grand Totals
+      2324        802         32        172       1504      20137   ELF Image Totals (compressed)
+      2324        802         32        172          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2356 (   2.30kB)
+    Total RW  Size (RW Data + ZI Data)              1832 (   1.79kB)
+    Total ROM Size (Code + RO Data + RW Data)       2528 (   2.47kB)
+
+==============================================================================
+

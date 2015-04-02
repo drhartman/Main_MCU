@@ -1,0 +1,4 @@
+--cpu Cortex-M4 "startup.o" "main.o" "events.o" "uart.o" ".\lib\pll.lib" ".\lib\gpio.lib" ".\lib\systick.lib" ".\lib\portC_init.lib" ".\lib\adc.lib" ".\lib\matrix_led.lib" ".\lib\timer0.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ece353_base_project.map" -o "ece353_base_project.axf"
